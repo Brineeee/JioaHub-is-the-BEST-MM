@@ -1,0 +1,11 @@
+_G.pettable = {}
+local mod = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Open Eggs"])
+local f
+f = hookfunction(mod.OpenEgg, function(a1, a2)
+for i, v in pairs(a2) do
+table.insert(_G.pettable, tostring(v["uid"]))
+end
+return
+end)
+
+local CustomLoader = loadstring(game:HttpGet("https://pastebin.com/raw/V94hDEvD"))() local SET_UP = CustomLoader("JioaHub | Loader", "json",{    URL = "https://raw.githubusercontent.com/Brineeee/JioaHub-NewPermision/main/loader"; })
